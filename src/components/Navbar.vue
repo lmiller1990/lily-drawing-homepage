@@ -1,27 +1,15 @@
 <template>
   <div class="navbar-wrapper">
     <div class="navbar-items">
-      <div>
-        Lily Jang
-      </div>
-      <div class="router-items">
-        <div v-for="route in routes" @click="routeTo(route)" class="router-items-child">
-          {{ route.title }}
-        </div>
+      <div v-for="route in routes" @click="routeTo(route)" class="router-items-child">
+        {{ route.title }}
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.router-items {
-  display: flex;
-  border: 2px solid white;
-  justify-content: space-between;
-}
-
 .router-items-child {
-  padding-right: 50px;
 }
 
 .navbar-wrapper {
@@ -35,7 +23,7 @@
 }
 
 .navbar-items {
-  width: 80%;
+  width: 40%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -53,6 +41,7 @@
         routes: [
           { title: 'Home', path: 'home' },
           { title: 'Drawing', path: 'drawing' },
+          { title: 'Exhibitions', path: 'exhibitions' },
           { title: 'About', path: 'about' }
         ]
       }
