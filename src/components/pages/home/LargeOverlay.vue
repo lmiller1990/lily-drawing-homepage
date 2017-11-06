@@ -21,6 +21,6 @@
 
 <style scoped>
 .artwork-collection {
-  text-align: center;
+  display: flex;
 }
 </style>

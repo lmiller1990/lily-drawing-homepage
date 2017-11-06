@@ -1,5 +1,7 @@
 <template>
-  <img class="artwork-tile" :src="img" />
+  <div class="artwork-tile-wrapper">
+    <img class="artwork-tile" :src="img" />
+  </div>
 </template>
 
 <script>
@@ -22,8 +24,12 @@
 </script>
 
 <style scoped>
+.artwork-tile-wrapper {
+  display: inline-block;
+}
+
 .artwork-tile {
-  width: 25%;
+  width: 100%;
   border: 1px solid darkgrey;
 }
 
