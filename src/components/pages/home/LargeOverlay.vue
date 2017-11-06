@@ -1,31 +1,26 @@
 <template>
   <div>
     <div class="artwork-collection">
-      <img class="artwork-tile" src="../../../assets/image_1.jpg">
-      <img class="artwork-tile" src="../../../assets/image_1.jpg">
-      <img class="artwork-tile" src="../../../assets/image_1.jpg">
-      <img class="artwork-tile" src="../../../assets/image_1.jpg">
-      <img class="artwork-tile" src="../../../assets/image_1.jpg">
-      <img class="artwork-tile" src="../../../assets/image_1.jpg">
+      <DrawingTile :imageLink="{ href: '/static/image_1', ext: 'jpg' }" />
+      <DrawingTile :imageLink="{ href: '/static/image_2', ext: 'jpg' }" />
+      <DrawingTile :imageLink="{ href: '/static/image_3', ext: 'jpg' }" />
     </div>
   </div>
 </template>
 
-<style scoped>
-.artwork-tile {
-  width: 25%;
-}
-
-.artwork-collection {
-  text-align: center;
-}
-</style>
-
 <script>
+  import DrawingTile from '../../shared/DrawingTile'
   export default {
-    name: 'LargeOverlay'
+    name: 'LargeOverlay',
+
+    components: {
+      DrawingTile
+    }
   }
 </script>
 
 <style scoped>
+.artwork-collection {
+  text-align: center;
+}
 </style>

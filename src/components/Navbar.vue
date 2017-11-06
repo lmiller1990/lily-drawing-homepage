@@ -23,9 +23,9 @@
 }
 
 .navbar-items {
-  width: 40%;
+  width: 20em;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   font-size: 1.1em;
   color: white;
