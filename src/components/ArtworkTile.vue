@@ -43,13 +43,11 @@
 <style scoped>
 .artwork {
   background-color: pink;
-  color: #FFF;
 }
 
 .overlay {
-  background-color: red;
+  height: 100%;
   display: flex;
-  min-height: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -62,7 +60,7 @@
 }
 
 .fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
+  transition: opacity .25s;
 }
 
 .fade-enter, .fade-leave-to {
