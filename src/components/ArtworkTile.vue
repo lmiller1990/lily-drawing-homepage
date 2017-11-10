@@ -1,8 +1,7 @@
 <template>
   <div class="artwork" @mouseenter="hover = true"  @mouseleave="hover = false">
     <transition name="fade" mode="out-in" key="image">
-      <div v-if="!hover">
-        <img :src="imageLink" class="image" />
+      <div :style="image" class="image" v-if="!hover">
       </div>
       <div v-else key="overlay" class="overlay">
         <div>
@@ -31,30 +30,39 @@
       return {
         hover: false
       }
-    }
+    },
+
+    computed: {
+      image () {
+        return { 'background-image': `url("${this.imageLink}")`}
+      }
+    },
   }
 </script>
 
 <style scoped>
 .artwork {
-  background-color: #444;
+  background-color: pink;
   color: #FFF;
 }
 
 .overlay {
+  background-color: red;
   display: flex;
-  height: 100%;
+  min-height: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .image {
-  max-width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .fade-enter-active, .fade-leave-active {
-    transition: opacity .5s;
+  transition: opacity .5s;
 }
 
 .fade-enter, .fade-leave-to {
